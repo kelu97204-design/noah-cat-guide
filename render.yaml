@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: noah-cat-guide
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ADMIN_PASSWORD
+        value: "123456"

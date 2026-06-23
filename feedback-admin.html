@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noah 反馈后台</title>
+  <link rel="icon" href="noah-logo.png" />
+  <link rel="stylesheet" href="lukee-cat-guide.css" />
+</head>
+<body class="admin-page">
+  <main class="admin-shell">
+    <section class="admin-login">
+      <div>
+        <span class="rank-source">Noah 猫咪图鉴</span>
+        <h1>后台登录</h1>
+        <p>请输入后台密码后查看用户反馈。</p>
+      </div>
+      <form class="admin-login-form">
+        <label>
+          <span>后台密码</span>
+          <input class="admin-password" type="password" placeholder="请输入密码" autocomplete="current-password" required />
+        </label>
+        <button class="admin-login-button" type="submit">进入后台</button>
+        <p class="admin-login-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="admin-content" hidden>
+      <header class="admin-header">
+        <div>
+          <span class="rank-source">Noah 猫咪图鉴</span>
+          <h1>反馈后台</h1>
+          <p>集中查看用户提交的意见、图片问题和页面体验建议。</p>
+        </div>
+        <a class="admin-home" href="lukee-cat-guide.html">返回网站</a>
+      </header>
+
+      <section class="admin-toolbar">
+        <label>
+          <span>筛选类型</span>
+          <select class="admin-filter">
+            <option value="all">全部反馈</option>
+            <option value="内容建议">内容建议</option>
+            <option value="图片问题">图片问题</option>
+            <option value="页面体验">页面体验</option>
+            <option value="其他">其他</option>
+          </select>
+        </label>
+        <button class="admin-refresh" type="button">刷新</button>
+        <button class="admin-export" type="button">导出 CSV</button>
+      </section>
+
+      <section class="feedback-list" aria-live="polite"></section>
+      <p class="admin-empty" hidden>暂时还没有反馈。</p>
+    </section>
+  </main>
+
+  <script src="feedback-admin.js"></script>
+</body>
+</html>
+
